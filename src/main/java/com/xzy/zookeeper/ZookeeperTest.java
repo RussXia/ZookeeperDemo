@@ -15,6 +15,7 @@ public class ZookeeperTest {
     private static final String HOST = "localhost:2181";
     public static void main(String[] args) throws Exception {
         ZooKeeper zookeeper = new ZooKeeper(HOST, TIME_OUT, new Watcher() {
+            //设置watcher，当watcher为true打开时，监听删除借点的操作，并打日志记录
             public void process(WatchedEvent event) {
                 if(event.getType().equals(Event.EventType.NodeDeleted)){
                     log.info("hello zookeeper");
@@ -42,8 +43,10 @@ public class ZookeeperTest {
         zookeeper.setData("/test", data.getBytes(), -1);
 
         log.info("========查看修改的节点是否成功=========");
-        log.info(new String(zookeeper.getData("/test", false, null)));
+        //将watcher打开，以便监听到后学的删除节点操作
+        log.info(new String(zookeeper.getData("/test", true, null)));
 
+        //如果watcher为true，则可以监听到，若为false，则无法监听到
         log.info("=======删除节点==========");
         zookeeper.delete("/test", -1);
 
