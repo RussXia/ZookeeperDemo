@@ -1,0 +1,83 @@
+2017-01-10 17:57:36,346 - Client environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2017-01-10 17:57:36,347 - Client environment:host.name=172.21.0.209
+2017-01-10 17:57:36,347 - Client environment:java.version=1.8.0_111
+2017-01-10 17:57:36,347 - Client environment:java.vendor=Oracle Corporation
+2017-01-10 17:57:36,347 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
+2017-01-10 17:57:36,347 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/tools.jar:/Users/RuzzZZ/PersonalWorkspace/IdeaWorkspace/Git/ZookeeperDemo/target/classes:/Users/RuzzZZ/DevelopTools/repo/org/apache/zookeeper/zookeeper/3.4.9/zookeeper-3.4.9.jar:/Users/RuzzZZ/DevelopTools/repo/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/RuzzZZ/DevelopTools/repo/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/RuzzZZ/DevelopTools/repo/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/RuzzZZ/DevelopTools/repo/jline/jline/0.9.94/jline-0.9.94.jar:/Users/RuzzZZ/DevelopTools/repo/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar:/Users/RuzzZZ/DevelopTools/repo/org/projectlombok/lombok/1.16.10/lombok-1.16.10.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-01-10 17:57:36,348 - Client environment:java.library.path=/Users/RuzzZZ/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-01-10 17:57:36,348 - Client environment:java.io.tmpdir=/var/folders/5s/7f1hzr117bzb0y4655trg_440000gp/T/
+2017-01-10 17:57:36,348 - Client environment:java.compiler=<NA>
+2017-01-10 17:57:36,348 - Client environment:os.name=Mac OS X
+2017-01-10 17:57:36,348 - Client environment:os.arch=x86_64
+2017-01-10 17:57:36,349 - Client environment:os.version=10.12.2
+2017-01-10 17:57:36,349 - Client environment:user.name=RuzzZZ
+2017-01-10 17:57:36,349 - Client environment:user.home=/Users/RuzzZZ
+2017-01-10 17:57:36,349 - Client environment:user.dir=/Users/RuzzZZ/PersonalWorkspace/IdeaWorkspace/Git/ZookeeperDemo
+2017-01-10 17:57:36,350 - Initiating client connection, connectString=localhost:2181 sessionTimeout=3000 watcher=null
+2017-01-10 17:57:36,380 - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-01-10 17:57:36,468 - Socket connection established to localhost/127.0.0.1:2181, initiating session
+2017-01-10 17:57:36,479 - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x159860859010007, negotiated timeout = 4000
+2017-01-10 17:57:36,481 - Error while calling watcher 
+java.lang.NullPointerException
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2017-01-10 17:57:36,483 - =========创建节点===========
+2017-01-10 18:53:29,579 - Client environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2017-01-10 18:53:29,580 - Client environment:host.name=172.21.0.209
+2017-01-10 18:53:29,580 - Client environment:java.version=1.8.0_111
+2017-01-10 18:53:29,580 - Client environment:java.vendor=Oracle Corporation
+2017-01-10 18:53:29,580 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
+2017-01-10 18:53:29,580 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/tools.jar:/Users/RuzzZZ/PersonalWorkspace/IdeaWorkspace/Git/ZookeeperDemo/target/classes:/Users/RuzzZZ/DevelopTools/repo/org/apache/zookeeper/zookeeper/3.4.9/zookeeper-3.4.9.jar:/Users/RuzzZZ/DevelopTools/repo/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/RuzzZZ/DevelopTools/repo/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/RuzzZZ/DevelopTools/repo/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/RuzzZZ/DevelopTools/repo/jline/jline/0.9.94/jline-0.9.94.jar:/Users/RuzzZZ/DevelopTools/repo/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar:/Users/RuzzZZ/DevelopTools/repo/org/projectlombok/lombok/1.16.10/lombok-1.16.10.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-01-10 18:53:29,581 - Client environment:java.library.path=/Users/RuzzZZ/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-01-10 18:53:29,581 - Client environment:java.io.tmpdir=/var/folders/5s/7f1hzr117bzb0y4655trg_440000gp/T/
+2017-01-10 18:53:29,581 - Client environment:java.compiler=<NA>
+2017-01-10 18:53:29,581 - Client environment:os.name=Mac OS X
+2017-01-10 18:53:29,581 - Client environment:os.arch=x86_64
+2017-01-10 18:53:29,582 - Client environment:os.version=10.12.2
+2017-01-10 18:53:29,582 - Client environment:user.name=RuzzZZ
+2017-01-10 18:53:29,582 - Client environment:user.home=/Users/RuzzZZ
+2017-01-10 18:53:29,583 - Client environment:user.dir=/Users/RuzzZZ/PersonalWorkspace/IdeaWorkspace/Git/ZookeeperDemo
+2017-01-10 18:53:29,587 - Initiating client connection, connectString=localhost:2181 sessionTimeout=3000 watcher=com.xzy.zookeeper.MyWatcher@5b37e0d2
+2017-01-10 18:53:29,621 - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-01-10 18:53:29,741 - Socket connection established to localhost/127.0.0.1:2181, initiating session
+2017-01-10 18:53:29,754 - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x159860859010008, negotiated timeout = 4000
+2017-01-10 18:53:29,760 - =============查看节点是否安装成功===============
+2017-01-10 18:53:29,766 - znode1
+2017-01-10 18:53:29,766 - =========修改节点的数据==========
+2017-01-10 18:53:29,769 - ========查看修改的节点是否成功=========
+2017-01-10 18:53:29,772 - zNode2
+2017-01-10 18:53:29,772 - =======删除节点==========
+2017-01-10 18:53:29,777 - ==========查看节点是否被删除============
+2017-01-10 18:53:29,786 - 节点状态：null
+2017-01-10 18:53:29,792 - Session: 0x159860859010008 closed
+2017-01-10 18:53:59,911 - Client environment:zookeeper.version=3.4.9-1757313, built on 08/23/2016 06:50 GMT
+2017-01-10 18:53:59,912 - Client environment:host.name=172.21.0.209
+2017-01-10 18:53:59,912 - Client environment:java.version=1.8.0_111
+2017-01-10 18:53:59,912 - Client environment:java.vendor=Oracle Corporation
+2017-01-10 18:53:59,912 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre
+2017-01-10 18:53:59,913 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/lib/tools.jar:/Users/RuzzZZ/PersonalWorkspace/IdeaWorkspace/Git/ZookeeperDemo/target/classes:/Users/RuzzZZ/DevelopTools/repo/org/apache/zookeeper/zookeeper/3.4.9/zookeeper-3.4.9.jar:/Users/RuzzZZ/DevelopTools/repo/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/RuzzZZ/DevelopTools/repo/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar:/Users/RuzzZZ/DevelopTools/repo/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/RuzzZZ/DevelopTools/repo/jline/jline/0.9.94/jline-0.9.94.jar:/Users/RuzzZZ/DevelopTools/repo/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar:/Users/RuzzZZ/DevelopTools/repo/org/projectlombok/lombok/1.16.10/lombok-1.16.10.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-01-10 18:53:59,913 - Client environment:java.library.path=/Users/RuzzZZ/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-01-10 18:53:59,913 - Client environment:java.io.tmpdir=/var/folders/5s/7f1hzr117bzb0y4655trg_440000gp/T/
+2017-01-10 18:53:59,913 - Client environment:java.compiler=<NA>
+2017-01-10 18:53:59,913 - Client environment:os.name=Mac OS X
+2017-01-10 18:53:59,913 - Client environment:os.arch=x86_64
+2017-01-10 18:53:59,913 - Client environment:os.version=10.12.2
+2017-01-10 18:53:59,913 - Client environment:user.name=RuzzZZ
+2017-01-10 18:53:59,914 - Client environment:user.home=/Users/RuzzZZ
+2017-01-10 18:53:59,914 - Client environment:user.dir=/Users/RuzzZZ/PersonalWorkspace/IdeaWorkspace/Git/ZookeeperDemo
+2017-01-10 18:53:59,917 - Initiating client connection, connectString=localhost:2181 sessionTimeout=3000 watcher=com.xzy.zookeeper.MyWatcher@5b37e0d2
+2017-01-10 18:53:59,964 - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-01-10 18:54:00,126 - Socket connection established to localhost/127.0.0.1:2181, initiating session
+2017-01-10 18:54:00,148 - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x159860859010009, negotiated timeout = 4000
+2017-01-10 18:54:00,150 - hello zookeeper
+2017-01-10 18:54:00,153 - hello event! type=None, stat=SyncConnected, path=null
+2017-01-10 18:54:00,157 - =========创建节点===========
+2017-01-10 18:54:00,201 - =============查看节点是否安装成功===============
+2017-01-10 18:54:00,272 - znode1
+2017-01-10 18:54:00,272 - =========修改节点的数据==========
+2017-01-10 18:54:00,277 - ========查看修改的节点是否成功=========
+2017-01-10 18:54:00,278 - zNode2
+2017-01-10 18:54:00,279 - =======删除节点==========
+2017-01-10 18:54:00,281 - ==========查看节点是否被删除============
+2017-01-10 18:54:00,285 - 节点状态：null
+2017-01-10 18:54:00,289 - Session: 0x159860859010009 closed
