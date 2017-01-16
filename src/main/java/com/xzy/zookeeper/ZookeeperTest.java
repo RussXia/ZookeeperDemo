@@ -12,7 +12,7 @@ import java.util.List;
 public class ZookeeperTest {
 
     private static final int TIME_OUT = 3000;
-    private static final String HOST = "127.0.0.1:2183";
+    private static final String HOST = "127.0.0.1:2181";
     public static void main(String[] args) throws Exception {
         ZooKeeper zookeeper = new ZooKeeper(HOST, TIME_OUT,new Watcher() {
             //设置watcher，watcher是一个一次性的触发器!!!!!
@@ -29,10 +29,35 @@ public class ZookeeperTest {
         log.info("=========当前根目录下已存在的结点数===========");
         log.info(list1.toString());
 
+        /**
+         * ephemeralOwner = 0x0
+         * 持久化状态节点(PERSISTENT_SEQUENTIAL/PERSISTENT):
+         * 节点不与特定的session相绑定，节点不随session的结束而删除。除非显示删除，否则节点一直存在
+         * 持久化节点的ephemeralOwner值恒为0！！！
+         */
+        log.info("=========创建PERSISTENT_SEQUENTIAL节点===========");
+        zookeeper.create("/test", "znode1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
+
         if(zookeeper.exists("/test", false) == null)
         {
-            log.info("=========创建节点===========");
+            log.info("=========创建PERSISTENT节点===========");
             zookeeper.create("/test", "znode1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        }
+
+        /**
+         * ephemeralOwner = 0x159a655f6cc000c
+         * 持久化状态节点(EPHEMERAL_SEQUENTIAL/EPHEMERAL):
+         * 节点随session的结束而自动删除。ephemeral节点不能拥有子节点
+         * 在ephemeral节点被删除之前，其他session也都可以访问该节点
+         * ephemeralOwner的值表示与该节点绑定的sessionId
+         */
+        log.info("=========创建EPHEMERAL_SEQUENTIAL节点===========");
+        zookeeper.create("/ephemeral", "znode1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+
+        if(zookeeper.exists("/ephemeral", false) == null)
+        {
+            log.info("=========创建EPHEMERAL节点===========");
+            zookeeper.create("/ephemeral", "znode1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
         }
 
         List<String> list2 = zookeeper.getChildren("/",false);
@@ -48,8 +73,8 @@ public class ZookeeperTest {
         log.info(new String(zookeeper.getData("/test", true, null)));
 
         //如果有watcher监测删除结点操作，触发watcher的process操作
-        log.info("=======删除节点==========");
-        zookeeper.delete("/test", -1);
+//        log.info("=======删除节点==========");
+//        zookeeper.delete("/test", -1);
 
         log.info("==========查看节点是否被删除============");
         log.info("节点状态：" + zookeeper.exists("/test", false));
