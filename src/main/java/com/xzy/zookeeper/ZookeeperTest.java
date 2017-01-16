@@ -19,7 +19,11 @@ public class ZookeeperTest {
             public void process(WatchedEvent event) {
                 //WatchedEvent存在keeperState和eventType两种可供监听的触发点，此处只监听删除结点动作，详情看WatchedEvent源码
                 if (event.getType().equals(Event.EventType.NodeDeleted)) {
-                    log.info("hello zookeeper");
+                    log.info("Node deleted!");
+                    log.info(String.format("hello event! type=%s, stat=%s, path=%s", event.getType(), event.getState(), event.getPath()));
+                }
+                if(event.getState().equals(Event.KeeperState.Disconnected)){
+                    log.info("Disconnected from zookeeper!");
                     log.info(String.format("hello event! type=%s, stat=%s, path=%s", event.getType(), event.getState(), event.getPath()));
                 }
             }
@@ -28,6 +32,11 @@ public class ZookeeperTest {
         List<String> list1 = zookeeper.getChildren("/",false);
         log.info("=========当前根目录下已存在的结点数===========");
         log.info(list1.toString());
+
+        /**
+         * SEQUENTIAL:
+         * 创建sequence节点时, ZooKeeper server会在指定的节点名称后加上一个数字序列, 该数字序列是递增的.
+         */
 
         /**
          * ephemeralOwner = 0x0
