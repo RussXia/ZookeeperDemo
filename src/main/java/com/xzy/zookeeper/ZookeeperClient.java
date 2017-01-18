@@ -121,8 +121,7 @@ public class ZookeeperClient {
      * 此处的nodePath也可以是子节点也可以是父亲节点路径
      *
      * @param nodePath
-     * @param modifyNodeData
-     *            更新后的数据
+     * @param modifyNodeData 更新后的数据
      */
     public static void updateNode(String nodePath, String modifyNodeData) {
         try {
@@ -140,7 +139,7 @@ public class ZookeeperClient {
      * 删除节点
      *
      * @param nodePath
-     *            删除节点的路径，可以是父亲节点也可以是子节点
+     * 删除节点的路径，可以是父亲节点也可以是子节点
      *
      */
     public static void deleteNode(String nodePath) {
