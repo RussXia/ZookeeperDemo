@@ -12,7 +12,7 @@ import java.util.List;
 public class ZookeeperTest {
 
     private static final int TIME_OUT = 3000;
-    private static final String HOST = "127.0.0.1:2888,127.0.0.1:2889,127.0.0.1:2890";
+    private static final String HOST = "127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183";
     public static void main(String[] args) throws Exception {
         ZooKeeper zookeeper = new ZooKeeper(HOST, TIME_OUT,new Watcher() {
             //设置watcher，watcher是一个一次性的触发器!!!!!
@@ -61,7 +61,8 @@ public class ZookeeperTest {
          * ephemeralOwner的值表示与该节点绑定的sessionId
          */
         log.info("=========创建EPHEMERAL_SEQUENTIAL节点===========");
-        zookeeper.create("/ephemeral", "znode1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        String str = zookeeper.create("/ephemeral", "znode1".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        log.info("========="+str+"========");
 
         if(zookeeper.exists("/ephemeral", false) == null)
         {
