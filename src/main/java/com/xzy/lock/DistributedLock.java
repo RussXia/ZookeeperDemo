@@ -33,7 +33,7 @@ public class DistributedLock implements Lock, Watcher {
 
     private String lockName;
 
-    private CountDownLatch flag = null;//判断其他线程是否释放了锁
+    private CountDownLatch lockFlag = null;//判断其他线程是否释放了锁
 
     private String currentNodeName;//当前节点
 
@@ -42,7 +42,7 @@ public class DistributedLock implements Lock, Watcher {
     /**
      * 分布式锁对象
      *
-     * @param lockName  锁名称
+     * @param lockName 锁名称
      */
     public DistributedLock(String lockName) {
         this.lockName = lockName;
@@ -64,15 +64,15 @@ public class DistributedLock implements Lock, Watcher {
     }
 
 
-
     /**
      * 设置监听处理
+     *
      * @param event
      */
     public void process(WatchedEvent event) {
-        //其他线程放弃锁的标志
-        if(this.flag != null) {
-            this.flag.countDown();
+        //其他线程放弃锁
+        if (this.lockFlag != null) {
+            this.lockFlag.countDown();
         }
 
     }
@@ -82,7 +82,7 @@ public class DistributedLock implements Lock, Watcher {
      * 1.判断自己是不是当前最小节点，如果是，则认为是持有当前锁
      * 2.如果不是当前最小节点，则当前线程继续等待锁
      */
-    public void lock(){
+    public void lock() {
         try {
             if (this.tryLock()) {
                 log.info("Success get the lock!");
@@ -90,9 +90,9 @@ public class DistributedLock implements Lock, Watcher {
             }
             waitForLock(preNodeName, SESSION_TIMEOUT);
         } catch (KeeperException e) {
-            log.error("Execption happened when try to get the lock.e:",e);
+            log.error("Execption happened when try to get the lock.e:", e);
         } catch (InterruptedException e) {
-            log.error("Execption happened when try to get the lock.e:",e);
+            log.error("Execption happened when try to get the lock.e:", e);
         }
     }
 
@@ -113,15 +113,16 @@ public class DistributedLock implements Lock, Watcher {
         try {
             //1.创建一个临时节点
             currentNodeName = zooKeeper.create(ROOT_PATH + "/" + lockName, new byte[0], ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
-            //2.获取当前根目录下的所有子节点
+            //2.获取当前根目录下的所有子节点0 = "myLock0000000005",1 = "myLock0000000006",2 = "myLock0000000007"
             List<String> allSubNodes = zooKeeper.getChildren(ROOT_PATH, false);
             Collections.sort(allSubNodes);
+            String currentNode = currentNodeName.substring(currentNodeName.lastIndexOf("/") + 1);
             //3.判断当前临时节点是否是最小节点，如果是返回true
-            if (currentNodeName.equals(allSubNodes.get(0))) {
+            if (currentNode.equals(allSubNodes.get(0))) {
                 return true;
             }
             //如果当前节点不是最小节点，找到自己的前一个节点，返回false
-            preNodeName = allSubNodes.get(Collections.binarySearch(allSubNodes, currentNodeName) - 1);
+            preNodeName = allSubNodes.get(Collections.binarySearch(allSubNodes, currentNode) - 1);
         } catch (KeeperException e) {
             throw new DistributedLockException(e);
         } catch (InterruptedException e) {
@@ -146,16 +147,16 @@ public class DistributedLock implements Lock, Watcher {
      * 删除节点就相当于释放锁
      */
     public void unlock() {
-        log.info("Try to release lock!");
+        log.warn("Try to release lock!");
         try {
             zooKeeper.delete(currentNodeName, -1);
             currentNodeName = null;
             //关闭资源
             zooKeeper.close();
         } catch (InterruptedException e) {
-            log.error("Execption happened when try to get the lock.e:",e);
+            log.error("Execption happened when try to get the lock.e:", e);
         } catch (KeeperException e) {
-            log.error("Execption happened when try to get the lock.e:",e);
+            log.error("Execption happened when try to get the lock.e:", e);
         }
     }
 
@@ -164,6 +165,7 @@ public class DistributedLock implements Lock, Watcher {
     }
 
     /**
+     *
      * @param preNode
      * @param waitTime
      * @return
@@ -171,11 +173,13 @@ public class DistributedLock implements Lock, Watcher {
     private boolean waitForLock(String preNode, Long waitTime) throws KeeperException, InterruptedException {
         //获取前一个节点，同时注册监听
         Stat stat = zooKeeper.exists(ROOT_PATH + "/" + preNode, true);
-        if(stat != null){
-            log.info("Thread " + Thread.currentThread().getId() + " waiting for " + ROOT_PATH + "/" + preNode);
-            this.flag = new CountDownLatch(1);
-            this.flag.await(waitTime, TimeUnit.MILLISECONDS);
-            this.flag = null;
+        if (stat != null) {
+            log.warn("Thread " + Thread.currentThread().getId() + " waiting for " + ROOT_PATH + "/" + preNode);
+            //设置锁标识
+            this.lockFlag = new CountDownLatch(1);
+            //当前一个节点删除时，会调用CountDownLatch.countDown()方法，此时await被唤醒
+            this.lockFlag.await(waitTime, TimeUnit.MILLISECONDS);
+            this.lockFlag = null;
         }
         return true;
     }
