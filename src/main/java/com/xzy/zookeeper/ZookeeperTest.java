@@ -12,7 +12,7 @@ import java.util.List;
 public class ZookeeperTest {
 
     private static final int TIME_OUT = 3000;
-    private static final String HOST = "127.0.0.1:2181";
+    private static final String HOST = "127.0.0.1:2888,127.0.0.1:2889,127.0.0.1:2890";
     public static void main(String[] args) throws Exception {
         ZooKeeper zookeeper = new ZooKeeper(HOST, TIME_OUT,new Watcher() {
             //设置watcher，watcher是一个一次性的触发器!!!!!

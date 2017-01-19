@@ -24,8 +24,5 @@ public class ZookeeperWatcherDemo {
                 }
             }
         });
-        while(true){
-
-        }
     }
 }
