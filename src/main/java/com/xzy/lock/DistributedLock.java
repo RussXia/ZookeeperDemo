@@ -27,7 +27,7 @@ public class DistributedLock implements Lock, Watcher {
 
     private static final Long SESSION_TIMEOUT = 10000L;
 
-    private static final String HOST_ADDRESS = "127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183";
+    private static final String HOST_ADDRESS = "127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183,127.0.0.1:2184,127.0.0.1:2185";
 
     private ZooKeeper zooKeeper;
 
@@ -48,8 +48,17 @@ public class DistributedLock implements Lock, Watcher {
         this.lockName = lockName;
         try {
             zooKeeper = new ZooKeeper(HOST_ADDRESS, SESSION_TIMEOUT.intValue(), this);
+            //如果zookeeper的连接断掉了(可能时zookeeper集群中有机器掉了)，继续重试，直到重新获得连接为止
+            if(!zooKeeper.getState().equals(ZooKeeper.States.CONNECTED)){
+                while(true){
+                    if(zooKeeper.getState().equals(ZooKeeper.States.CONNECTED)){
+                        break;
+                    }
+                }
+            }
             Stat stat = zooKeeper.exists(ROOT_PATH, false);
             //如果不存在根节点，则创建一个
+            // TODO: 2017/1/20 多线程并发时，因为都没有Root节点，所以会发生创建异常
             if (stat == null) {
                 zooKeeper.create(ROOT_PATH, new byte[0], ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             }

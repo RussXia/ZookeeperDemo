@@ -25,6 +25,7 @@ public class TestMain {
                 log.warn("I'm get the Lock now! The current thread is :"+Thread.currentThread().getId());
                 lock.unlock();
             }
+            System.out.println("The thread "+Thread.currentThread().getId()+" is finished!");
         }
     }
 
