@@ -48,7 +48,7 @@ public class DistributedLock implements Lock, Watcher {
         this.lockName = lockName;
         try {
             zooKeeper = new ZooKeeper(HOST_ADDRESS, SESSION_TIMEOUT.intValue(), this);
-            //如果zookeeper的连接断掉了(可能时zookeeper集群中有机器掉了)，继续重试，直到重新获得连接为止
+            //如果zookeeper的连接断掉了(可能时zookeeper集群中有机器挂了)，继续重试，直到重新获得连接为止
             if(!zooKeeper.getState().equals(ZooKeeper.States.CONNECTED)){
                 while(true){
                     if(zooKeeper.getState().equals(ZooKeeper.States.CONNECTED)){
@@ -58,7 +58,7 @@ public class DistributedLock implements Lock, Watcher {
             }
             Stat stat = zooKeeper.exists(ROOT_PATH, false);
             //如果不存在根节点，则创建一个
-            // TODO: 2017/1/20 多线程并发时，因为都没有Root节点，所以会发生创建异常
+            //多线程并发时，因为都没有Root节点，可能会发生创建异常
             if (stat == null) {
                 zooKeeper.create(ROOT_PATH, new byte[0], ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
             }
@@ -83,7 +83,6 @@ public class DistributedLock implements Lock, Watcher {
         if (this.lockFlag != null) {
             this.lockFlag.countDown();
         }
-
     }
 
     /**
